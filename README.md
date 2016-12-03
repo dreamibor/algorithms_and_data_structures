@@ -7,10 +7,10 @@ List of Data Structures:
 3. Stacks and Queues  
 4. Heap  
 5. Vectors / ArrayLists  
-6. *Hash Tables*  
+6. **Hash Tables**  
 
 
-List of Algorithms:
+List of Algorithms:  
 1. Quick Sort  
 2. Merge Sort  
 3. Binary Search  
