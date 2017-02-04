@@ -1,4 +1,4 @@
-# /Algorithm-and-Data-Structure-Using-Python  
+# Algorithm-and-Data-Structure-Using-Python  
 Using python to implement basic algorithms and data structures(List are from *Cracking The Coding Interview*).  
   
 List of Data Structures:  
