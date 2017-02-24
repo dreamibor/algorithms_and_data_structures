@@ -1,5 +1,5 @@
 # Algorithms and Data Structures Using Python  
-Using python to implement basic algorithms and data structures(from *Cracking The Coding Interview*).  
+Implementing basic algorithms and data structures(from *Cracking The Coding Interview*) using Python.  
   
 List of Data Structures:  
 1. Linked List  
