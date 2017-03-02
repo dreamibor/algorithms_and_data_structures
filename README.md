@@ -1,4 +1,5 @@
-# Algorithms and Data Structures Using Python, Swift, C/C++  
+# Algorithms and Data Structures  
+# Using Python, Swift and C/C++  
 Implementing basic algorithms and data structures(from *Cracking The Coding Interview*).  
   
 List of Data Structures:  
