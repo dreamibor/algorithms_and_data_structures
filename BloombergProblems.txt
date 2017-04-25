@@ -15,5 +15,17 @@ any preceding brackets.
 9.What features have you written in Java?
 10.Compute the longest group of characters in a given string. (e.g. Given
 "aabbbaabaa", the output should be b3, as "bbb" is the longest substring
-consisting of the same character in the string.)
-11.
+consisting of the same character in the string.
+
+Mine:
+
+（1）LeetCode 445. Add Two Numbers II
+
+
+[1,2,0,0,5,0,0,7]
+Swap all the zero to at last of the array.
+[1,2,5,7,0,0,0,0]
+
+Time O(n) Space O(1)
+
+pointer to first zero.
