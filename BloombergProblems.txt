@@ -6,9 +6,8 @@ more than once) in place. Do it in O(n) without shifting.
 it (takes the encrypted string and returns the original)
 4.Given two linked lists that represent two numbers add them. Each node in the
 list has a pointer to the next digit and the last digit points to null
-5.Nothing too difficult. How to verify a string made from
-"{[()]}" is syntactically correct. With each open bracket being closed before
-any preceding brackets.
+5.How to verify a string made from"{[()]}" is syntactically correct.
+With each open bracket being closed before any preceding brackets.
 6.What do you know about Bloomberg?
 7.Why do you want to work as a software engineer at Bloomberg?
 8.Describe a project that you made.
