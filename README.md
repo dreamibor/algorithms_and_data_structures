@@ -1,4 +1,4 @@
-# Algorithms and Data Structures (With Python and C++)  
+# Algorithms and Data Structures (Python and C++)  
 
 Implementing basic algorithms and data structures (from *Cracking The Coding Interview*).  
   
