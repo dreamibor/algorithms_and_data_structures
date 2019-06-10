@@ -1,0 +1,13 @@
+# General questions
+1.Why Bloomberg?
+2.What do you know about Bloomberg?
+3.Describe a project that you made.
+4.Why do you want to work as a software engineer at Bloomberg?
+5.What features have you written in Java?
+
+# Coding problems
+1. Given an array of integers, delete the max and min numbers (both could appear more than once) in place. Do it in O(n) without shifting.
+2.Given a function cipher(c) that takes a char and returns it's encryption (another char), write two functions: one to encrypt a string and one to decrypt it (takes the encrypted string and returns the original)
+3.Given two linked lists that represent two numbers add them. Each node in the list has a pointer to the next digit and the last digit points to null
+4.Nothing too difficult. How to verify a string made from "{[()]}" is syntactically correct. With each open bracket being closed before any preceding brackets.
+5.Compute the longest group of characters in a given string. (e.g. Given "aabbbaabaa", the output should be b3, as "bbb" is the longest substring consisting of the same character in the string.)
