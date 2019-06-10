@@ -21,7 +21,7 @@ List of Algorithms:
 
 List of Concepts:  
 1. Bit Manipulation  
-2. Memory(Stacks VS. Heap)  
+2. Memory(Stacks V.S. Heap)  
 3. Recursion  
 4. Dynamic Programming  
 5. Big O(Time & Space)  
