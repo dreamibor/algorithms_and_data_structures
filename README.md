@@ -1,6 +1,6 @@
-# Algorithms and Data Structures (Python and C++)  
+# Algorithms and Data Structures    
 
-Implementing basic algorithms and data structures (from *Cracking The Coding Interview*).  
+Implementing basic algorithms and data structures from *Cracking The Coding Interview* in Python and C++.    
   
 List of Data Structures:  
 1. Linked List  
