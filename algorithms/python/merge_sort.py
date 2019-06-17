@@ -1,36 +1,54 @@
-def merge_sort(alist):
-    if len(alist) > 1:
-        mid = len(alist) // 2
-        left_half = alist[:mid]
-        right_half = alist[mid:]
+def merge(arr, l, mid, r):
+    """ Merge function to merge left and right array into one sorted array.
+    """
+    # Initialise start postions for while loop
+    i = l; j = mid + 1
+    temp = []
 
-        merge_sort(left_half)
-        merge_sort(right_half)
-
-        i=0
-        j=0
-        k=0
-
-        while i< len(left_half) and j < len(right_half):
-            if left_half[i] < right_half[j]:
-                alist[k] = left_half[i]
-                k += 1
-                i += 1
-            else:
-                alist[k] = right_half[j]
-                k += 1
-                j += 1
-
-        while i < len(left_half):
-            alist[k] = left_half[i]
+    # Compare the elements in two arrays and merge the smallest into sorted array
+    while i <= mid and j <= r:
+        if arr[i] < arr[j]:
+            temp.append(arr[i])
             i += 1
-            k += 1
-
-        while j < len(right_half):
-            alist[k] = right_half[j]
+        else:
+            temp.append(arr[j])
             j += 1
-            k += 1
-    print("Merging: ", alist)
-alist = [54,26,93,17,77,31,44,55,20]
-merge_sort(alist)
-print(alist)
+    
+    # Merge the remaining array
+    while i <= mid:
+        temp.append(arr[i])
+        i += 1
+    
+    while j <= r:
+        temp.append(arr[j])
+        j += 1
+    
+    # Copy the sorted array into the original array
+    for i in range(len(temp)):
+        arr[i+l] = temp[i]
+
+def merge_sort_partition(arr, l, r):
+    """ Recusion code to merge left and right part.
+    """
+    if l >= r:
+        return None
+
+    mid = (l + r) // 2
+    merge_sort_partition(arr, l, mid)
+    merge_sort_partition(arr, mid+1, r)
+    merge(arr, l, mid, r)
+
+def merge_sort(arr):
+    """ Wrap recusion code
+    """
+    if len(arr) <= 1:
+        return arr
+    
+    merge_sort_partition(arr, 0, len(arr) - 1)
+
+
+if __name__ == "__main__":
+    example = [4,5,6,1,3,2,7,32,7,213,434,55,677,334,23,50,20]
+    print("Original Array:     {}".format(example))
+    merge_sort(example)
+    print("Merge Sorted Array: {}".format(example))

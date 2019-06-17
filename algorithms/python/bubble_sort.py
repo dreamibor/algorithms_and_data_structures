@@ -35,8 +35,9 @@ def bubble_sorting_backward(array):
                 array[j], array[j+1] = array[j+1], array[j]
     return array
 
-my_list = [3,5,4,1,2,6,1]
-# Sort from min to max
-print("Bubble Sort Forward:            {}".format(bubble_sorting_forward(my_list)))
-print("Bubble Sort Forward Early Stop: {}".format(bubble_sorting_forward_early_stop(my_list)))
-print("Bubble Sort Backward:           {}".format(bubble_sorting_backward(my_list)))
+if __name__ == "__main__":
+    my_list = [3,5,4,1,2,6,1]
+    # Sort from min to max
+    print("Bubble Sort Forward:            {}".format(bubble_sorting_forward(my_list)))
+    print("Bubble Sort Forward Early Stop: {}".format(bubble_sorting_forward_early_stop(my_list)))
+    print("Bubble Sort Backward:           {}".format(bubble_sorting_backward(my_list)))

@@ -1,31 +1,26 @@
-def quick_sort(alist):
-    quick_sort_helper(alist, 0, len(alist) - 1)
+def partition(arr, l, r):
+    pass
 
-def quick_sort_helper(alist, first, last):
-    if first < last:
-        splitpoint = partition(alist, first, last)
-        quick_sort_helper(alist, first, splitpoint - 1)
-        quick_sort_helper(alist, splitpoint + 1, last)
+def quick_sort_partition(arr, l, r):
+    if l >= r: return None
+    q = partition(arr, l, r)
+    quick_sort_partition(arr, l, q)
+    quick_sort_partition(arr, q+1, r)
+6
+def quick_sort(arr):
+    """ Quick sort.
+    Recursive Formula: quick_sort(p...r) = quick_sort(p...q-1) + quick_sort(q+1...r)
+    Termination Condition: l >= r
+    Time Complexity: average: O(N*logN) worst:O(N)
+    Space Complexity: O(1)
+    """
+    if len(arr) <= 1:
+        return arr
+    quick_sort_partition(arr, 0, len(arr) - 1)
 
-def partition(alist, first, last):
-    pivot = alist[first]
-    left_mark = first + 1
-    right_mark = last
 
-    done = False
-    while not done:
-        while left_mark <= right_mark and alist[left_mark] <= pivot:
-            left_mark += 1
-        while alist[right_mark] >= pivot and right_mark >= left_mark:
-            right_mark -= 1
-        if left_mark > right_mark:
-            done = True
-        else:
-            alist[left_mark], alist[right_mark] = alist[right_mark], alist[left_mark]
-
-    alist[first], alist[right_mark] = alist[right_mark], alist[first]
-    return right_mark
-
-alist = [54,26,93,17,77,31,44,55,20]
-quick_sort(alist)
-print(alist)
+if __name__ == "__main__":
+    example = [6,5,4,3,1,2]
+    print("Original Array:     {}".format(example))
+    quick_sort(example)
+    print("Quick Sorted Array: {}".format(example))
