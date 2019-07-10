@@ -16,6 +16,7 @@ class Graph():
         for i in range(self.v):
             print("{:6d} - {}".format(i, self.adj[i]))
 
+
 def create_test_graph():
     graph = Graph(8)
     graph.add_edge(0,1)
@@ -29,6 +30,11 @@ def create_test_graph():
     graph.add_edge(5,7)
     graph.add_edge(6,7)
     return graph
+
+if __name__ == "__main__":
+    graph = create_test_graph()
+    graph.show_graph()
+
 
 # TODO: Adjacent Matrix
 
