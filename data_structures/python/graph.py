@@ -1,20 +1,23 @@
+from collections import defaultdict
+
+
 class Graph():
     """ Graph stored using adjacent list. """
     def __init__(self, v):
         if v <= 1: raise ValueError("Graph has wrong number of vertices!")
         self.v = v # Number of vertices
-        self.adj = [[] for i in range(self.v)]
+        self.adj = defaultdict(set)
 
     def add_edge(self, start, terminal):
         # Undirected graphs's edge will be saved twice
-        self.adj[start].append(terminal)
-        self.adj[terminal].append(start)
+        self.adj[start].add(terminal)
+        self.adj[terminal].add(start)
 
     def show_graph(self):
         # TODO: A better function to visualise graphs in text
         print("Vertex - Connected Vertices")
-        for i in range(self.v):
-            print("{:6d} - {}".format(i, self.adj[i]))
+        for k, v in self.adj.items():
+            print("{:6d} - {}".format(k, v))
 
 
 def create_test_graph():
