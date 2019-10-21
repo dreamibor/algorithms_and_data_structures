@@ -1,7 +1,7 @@
 # 经典例题
 ## 数组
-1. - [ ]实现一个支持动态扩容的数组 - [ ]
-2. - [ ]实现一个大小固定的有序数组，支持动态增删改操作 [ ]
+1.  - [ ]实现一个支持动态扩容的数组  - [ ]
+2.  - [ ]实现一个大小固定的有序数组，支持动态增删改操作 [ ]
 3. - [ ]实现两个有序数组合并为一个有序数组
 4. - [ ]Three Sum - https://leetcode.com/problems/3sum/
 5. - [ ]Majority Element - https://leetcode.com/problems/majority-element/
