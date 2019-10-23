@@ -4,6 +4,8 @@ Maximum Sum Subarray of Size K (easy)
 Input: [2, 1, 5, 1, 3, 2], k=3
 Output: 9
 Explanation: Subarray with maximum sum is [5, 1, 3].
+Time Complexity - O(N)
+Space Complexity - O(1)
 """
 
 
@@ -16,7 +18,7 @@ def maximum_sum_subarray_of_size_k(arr, k):
 
         if window_end >= k-1:
             if current_sum > maximum:
-                maximum = current_sum
+                maximum = current_sum # maximum = max(current_sum, maximum)
             current_sum -= arr[window_start]
             window_start += 1
     return maximum
