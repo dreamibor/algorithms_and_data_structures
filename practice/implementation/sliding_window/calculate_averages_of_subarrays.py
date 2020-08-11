@@ -21,5 +21,5 @@ def calculate_averages_of_subarrays(array, k):
 
 
 if __name__ == "__main__":
-    result = calculate_averages_of_subarrays([1, 3, 2, 6, -1, 4, 1, 8, 2], k =5)
+    result = calculate_averages_of_subarrays([1, 3, 2, 6, -1, 4, 1, 8, 2], k=5)
     print(result)

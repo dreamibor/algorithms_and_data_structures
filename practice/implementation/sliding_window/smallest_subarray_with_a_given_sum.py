@@ -29,5 +29,5 @@ def smallest_subarray_with_given_sum(arr, s):
     return 0
 
 
-result = smallest_subarray_with_given_sum([2, 1, 5, 2, 3, 2], 7)
+result = smallest_subarray_with_given_sum([2, 1, 5, 2, 3, 2], s=7)
 print(result)
