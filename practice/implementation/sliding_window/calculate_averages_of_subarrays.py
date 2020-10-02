@@ -1,6 +1,5 @@
 """
-Grokking the Coding Interview: Patterns for Coding Questions
-Sliding window - Introduction
+Sliding window - Calculate Avearages of Subarrays
 
 Description: Given an array, find the average of all contiguous subarrays of size K in it.
 

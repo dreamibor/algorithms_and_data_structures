@@ -1,5 +1,4 @@
 """
-Grokking the Coding Interview: Patterns for Coding Questions
 Sliding window - Longest Substring with K Distinct Characters (medium)
 
 Description:
@@ -13,7 +12,7 @@ Explanation: The longest substring with no more than '2' distinct characters is 
 Time Complexity - O(N)
 Space Complexity - O(1)
 
-LeetCode link:
+LeetCode link: https://leetcode-cn.com/problems/longest-substring-with-at-most-k-distinct-characters/
 """
 
 def longest_substring_with_k_distinct(string, k):

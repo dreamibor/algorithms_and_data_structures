@@ -1,5 +1,4 @@
 """
-Grokking the Coding Interview: Patterns for Coding Questions
 Sliding window - Maximum Sum Subarray of Size K (easy)
 
 Description: Given an array of positive numbers and a positive number ‘k’, find the maximum sum of any contiguous subarray of size ‘k’.

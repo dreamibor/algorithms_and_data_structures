@@ -1,5 +1,4 @@
 """
-Grokking the Coding Interview: Patterns for Coding Questions
 Sliding window - Smallest Subarray with a given sum (easy)
 
 Description:
@@ -17,7 +16,6 @@ Space Complexity - O(1)
 
 Relevatn LeetCode link (Hard): https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/
 """
-
 
 def smallest_subarray_with_given_sum(s, arr):
     window_sum = 0

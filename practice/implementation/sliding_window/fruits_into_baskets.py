@@ -1,5 +1,4 @@
 """
-Grokking the Coding Interview: Patterns for Coding Questions
 Sliding window - Fruits into Baskets (medium)
 
 Description:
@@ -30,11 +29,11 @@ def fruits_into_baskets(fruits):
     for window_end in range(len(fruits)):
         current_fruit_num.add(fruits[window_end])
 
-    while len(current_fruit_num) > 2:
-        window_start += 1
-        current_fruit_num = set(fruits[window_start:window_end+1])
+        while len(current_fruit_num) > 2:
+            window_start += 1
+            current_fruit_num = set(fruits[window_start:window_end+1])
 
-    max_num = max(max_num, window_end-window_start+1)
+        max_num = max(max_num, window_end-window_start+1)
 
     return max_num
 
