@@ -36,4 +36,3 @@ def length_of_longest_subarray(arr, k):
 if __name__ == "__main__":
   print(f"Length of the longest subarray {length_of_longest_subarray([0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1], 2)}")
   print(f"Length of the longest subarray {length_of_longest_subarray([0, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 1], 3)}")
-
