@@ -9,8 +9,8 @@ Input: String="bcdxabcdy", Pattern="bcdyabcdx"
 Output: true
 Explanation: Both the string and the pattern are a permutation of each other.
 
-Time Complexity - O(N+M) or O(N)- N is the number of characters in the input string.
-Space Complexity - O(M) or O(1)- M is the number of distinct characters in the pattern.
+Time Complexity - O(N+M) - N is the number of characters in the input string.
+Space Complexity - O(M) - M is the number of distinct characters in the pattern.
 
 LeetCode link: https://leetcode-cn.com/problems/permutation-in-string/
 """
