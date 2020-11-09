@@ -7,11 +7,11 @@ of the array as objects, hence, we can’t count 0s, 1s, and 2s to recreate the 
 
 The flag of the Netherlands consists of three colors: red, white and blue; and since our 
 input array also consists of three different numbers that is why it is called Dutch National 
-Flag problem.
+Flag problem. It's first proposed by computer scientist Edsger Wybe Dijkstra.
 
 Example:
-Input: [2,0,2,1,1,0]
-Output: [0,0,1,1,2,2]
+Input:  [2, 0, 2, 1, 1, 0]
+Output: [0, 0, 1, 1, 2, 2]
 
 Notes:
 1. We shall modify the array in-place.
@@ -24,8 +24,8 @@ LeetCode link: https://leetcode-cn.com/problems/sort-colors/
 
 
 def sort_colours(nums:list) -> list:
-    """ Two pointers - similar to partition in quick sort.
-    Initially, there are two pointers called low and high which are pointing at the first 
+    """ Two pointers - similar to the idea of `partition` in quick sort.
+    Initially, we set two pointers called `low` and `high` which are pointing at the first 
     element and the last element in the array. 
     While iterating, we will move all 0s before low and all 2s after high, so in the end, 
     all 1s will be between low and high.
