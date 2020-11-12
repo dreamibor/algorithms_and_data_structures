@@ -82,7 +82,6 @@ class LinkedList:
             yield node
             node = node.next
 
-
     def append_start(self, node):
         """ Add a node at the beginning of the linked list.
         """
@@ -128,17 +127,7 @@ class LinkedList:
                 break
             current = current.next
 
-def reverse_linked_list(head: Node) -> Node:
-    prev = None
-    current = head
 
-    while current:
-        temp = current.next # Temporarily store the next node of current.
-        current.next = prev # Reverse the current node, change it's next to prev.
-        prev = current # Assign the current node to prev
-        current = temp # current becomes the current.next node.
-    
-    return prev
 
 
 if __name__=="__main__":
@@ -153,9 +142,4 @@ if __name__=="__main__":
     print(f"Linked List: {new_list}")
     new_list.remove(9)
     print(f"Linked List: {new_list}")
-
-    new_head = reverse_linked_list(new_list.head)
-    reverted_list = LinkedList()
-    reverted_list.head = new_head
-    print(f"Linked List: {reverted_list}")
 
