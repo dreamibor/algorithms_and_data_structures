@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """ 实现一个支持动态扩容的数组
 
 https://blog.csdn.net/weixin_43633501/article/details/90108817
@@ -42,8 +41,9 @@ class DynamicArray:
         self._data = new_data
         self._capacity *= 2
 
-    def print_array(self):
-        print(self._data)
+    def __repr__(self):
+        temp = [f"{data}" for data in self._data]
+        return " ".join(temp)
 
 
 if __name__ == "__main__":
@@ -51,8 +51,7 @@ if __name__ == "__main__":
     my_array.add(0, 0)
     my_array.add(3, 30)
     my_array.add(5, 50)
-    my_array.print_array()
+    print(my_array)
 
     my_array.delete(5)
-    my_array.print_array()
-
+    print(my_array)
