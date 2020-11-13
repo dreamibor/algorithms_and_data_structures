@@ -31,6 +31,8 @@ def start_of_cycle(head: ListNode) -> ListNode:
     the fast travels two times faster than slow, so
     a + (n+1)b +nc = 2(a+b) => a = c + (n-1)(b+c)
 
+    More Explanation:
+    https://leetcode-cn.com/problems/linked-list-cycle-ii/solution/142-huan-xing-lian-biao-ii-jian-hua-gong-shi-jia-2/
     Time Complexity - O(N) - N is the total number of elements in the LinkedList.
     Space Complexity - O(1) - For three pointers.
     """
