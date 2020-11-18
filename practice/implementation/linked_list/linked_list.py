@@ -10,6 +10,10 @@ class ListNode:
     
     def __repr__(self):
         return f"{self.val}"
+    
+    def __lt__(self, other):
+        # Used for min heap.
+        return self.val < other.val
 
 def traverse(head: ListNode) -> str:
     """ Traverse linked list from head node.
