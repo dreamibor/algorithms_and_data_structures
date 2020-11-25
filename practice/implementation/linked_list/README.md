@@ -12,7 +12,7 @@ Application scenarios:
 
 A List of Linked List related problems:
 1. - [x] Implement singly linked list, doubly linked list and cyclic linked list with operations such as insertion, deletion.
-2. - [x] [Reverse Singlye linked list](https://leetcode-cn.com/problems/reverse-linked-list/) 
+2. - [x] [Reverse Linked List](https://leetcode-cn.com/problems/reverse-linked-list/) 
 3. - [x] [Reverse Linked List II](https://leetcode-cn.com/problems/reverse-linked-list-ii/)
 4. - [x] [Middle of Linked List](https://leetcode-cn.com/problems/middle-of-the-linked-list/)
 5. - [x] [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)
