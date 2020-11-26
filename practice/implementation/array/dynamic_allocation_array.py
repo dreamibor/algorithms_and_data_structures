@@ -1,6 +1,5 @@
-""" 实现一个支持动态扩容的数组
-
-https://blog.csdn.net/weixin_43633501/article/details/90108817
+"""
+Array - Implement A Dynamic Expansion Array
 
 Properties：
     capacity - capacity of the array
@@ -8,6 +7,9 @@ Properties：
 Functions:
     add() - add element to the array
     remove() - remove element in the array
+
+Reference:
+https://blog.csdn.net/weixin_43633501/article/details/90108817
 """
 
 
@@ -24,7 +26,9 @@ class DynamicArray:
         if index == self._capacity:
             self._resize()
 
-        # TODO: What if there is already an element at this index?
+        # What if there is already an element at this index?
+        # Usually in Python, when you replace an element in 
+        # a list, there is no warninig about this.
         self._data[index] = element
         self._size += 1
 
@@ -35,7 +39,9 @@ class DynamicArray:
         self._data[index] = None
 
     def _resize(self):
+        # Double the list capacity.
         new_data = [None] * (self._capacity * 2)
+        # Move original elements into the new array.
         for i in range(self._capacity):
             new_data[i] = self._data[i]
         self._data = new_data
