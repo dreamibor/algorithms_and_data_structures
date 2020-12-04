@@ -72,3 +72,5 @@ Priority queues are often implemented using **binary heaps**. Highest priority i
 - [x] [Valid Parentheses](https://leetcode-cn.com/problems/valid-parentheses/)
 - [x] [Implement Stack Using Queues](https://leetcode-cn.com/problems/implement-stack-using-queues/)
 - [x] [Implement Queue Using Stacks](https://leetcode-cn.com/problems/implement-queue-using-stacks/)
+- [x] [Min Stack](https://leetcode-cn.com/problems/min-stack/)
+- [x] [Evaluate Reverse Polish Notation](https://leetcode-cn.com/problems/evaluate-reverse-polish-notation/)

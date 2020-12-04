@@ -1,6 +1,7 @@
 """
 Stack - Implement Stack Using Queues (easy)
 
+Description:
 Implement a last in first out (LIFO) stack using only two queues. The implemented 
 stack should support all the functions of a normal queue (push, top, pop, and empty).
 

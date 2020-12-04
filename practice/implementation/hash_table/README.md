@@ -57,7 +57,7 @@ Dictionaries work by computing a hash code for each key stored in the dictionary
 # Bloom Filter
 A bloom filter is a space-efficient data structure that lets you quickly check whether an item is in a set or not.
 
-The tradeoff for that space efficiency is that it's probabilistic: sometimes instead of giving you concrete answers it just says "probably."
+The tradeoff for that space efficiency is that it's probabilistic: sometimes instead of giving you concrete answers it just says "probably".
 
 When you look up an item in a bloom filter, the possible answers are:
 - It's definitely not in the set. This is a true negative.
