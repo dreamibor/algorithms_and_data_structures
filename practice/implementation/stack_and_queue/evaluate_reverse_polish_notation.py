@@ -26,6 +26,7 @@ def eval_rpn(tokens: list) -> int:
             # If the token is not an operator, then push it to stack.
             stack.append(int(token))
         else:
+            # a, b is poped in sequence, b is after a.
             a, b = stack.pop(), stack.pop()
             if token == "+":
                 stack.append(a + b)

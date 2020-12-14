@@ -1,5 +1,5 @@
 """
-Stack - Valid Parentheses (easy)
+Stack - Longest Valid Parentheses (hard)
 
 Description:
 Given a string containing just the characters '(' and ')', find the length 
