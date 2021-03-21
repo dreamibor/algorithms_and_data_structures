@@ -48,7 +48,8 @@ def reverse_linked_list_recursion(head: ListNode) -> ListNode:
 
     It'll be hard for human beings to understand the full process of recursion, 
     as our brains are not designed to push many items in stack, so we need to 
-    focus on one stage, rather than try to understand the full process.
+    focus on one stage (see reverse_linked_list_single_case.jpg for reference), 
+    rather than try to understand the full process.
 
     For a single stage: 
     Given an input node head, reverse the linked list starting with head, and 

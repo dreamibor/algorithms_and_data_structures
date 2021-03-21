@@ -1,5 +1,5 @@
 """
-Linked List -Reverse Linked List II (medium)
+Linked List - Reverse Linked List II (medium)
 
 Description:
 Reverse a linked list from position m to n. Do it in one-pass.
