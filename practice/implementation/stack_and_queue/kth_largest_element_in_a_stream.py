@@ -29,10 +29,10 @@ LeetCode Link: https://leetcode-cn.com/problems/kth-largest-element-in-a-stream/
 import heapq
 
 class KthLargest:
-    """ Using Python built-in heapq. 
+    """ Using Python built-in heapq (Min heap, the smallest element is always the root heap[0]). 
     Heapq docs:
     - heapq.heappush(heap, item)
-        Push the value item onto the heap, maintaining the heap invariant.
+        Push the value item onto the heap, maintaining the heap invariant (unchanged).
     - heapq.heappop(heap)
         Pop and return the smallest item from the heap, maintaining the heap invariant. 
         If the heap is empty, IndexError is raised.
@@ -61,7 +61,7 @@ class KthLargest:
         # Pop elements out to keep k elements in the heap.
         if len(self.heap) > self.k:
             heapq.heappop(self.heap)
-        # Return the 
+        # Return the root.
         return self.heap[0]
 
 
