@@ -1,5 +1,5 @@
 """
-Array - Two Sum (easy)
+Array / Hash Table - Two Sum (easy)
 
 Description:
 Given an array of integers `nums` and an integer `target`, return indices of 

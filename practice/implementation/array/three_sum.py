@@ -2,8 +2,8 @@
 Two Pointers - Three Sum (medium)
 
 Description:
-The problem is also called Triplet Sum to Zero.
 Given an array of unsorted numbers, find all unique triplets in it that add up to zero.
+The problem is also called "Triplet Sum to Zero".
 
 Example:
 Input: [-3, 0, 1, 2, -1, 1, -2]
@@ -22,7 +22,7 @@ LeetCode link: https://leetcode-cn.com/problems/3sum/
 """
 
 def three_sum(nums: list, target: int) -> list:
-    """ Two Pointers - Based on Two Sum Pairs
+    """ Two Pointers - Sort and Find
 
     The target is to find a triplet a + b + c = 0.
 
