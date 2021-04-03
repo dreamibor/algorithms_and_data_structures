@@ -85,10 +85,12 @@ log2(n+1) = h
 
 A perfect tree is balanced, and in a perfect tree the height grows logarithmically with the number of nodes. 
 
-# Binary Search Tree
-A **binary search tree** is a binary tree where the nodes are ordered in a specific way, for every node:
-- The nodes to the left are smaller than the current node.
-- The nodes to the right are larger than the current node.
+# Binary Search Tree 
+A **binary search tree** is a binary tree where the nodes are ordered in a specific way, it could be an empty tree or for every node:
+- The nodes (sub-tree) to the left are smaller than the current node.
+- The nodes (sub-tree) to the right are larger than the current node.
+
+Recursively, their left and right sub-trees are also binary search trees.
 
 Time Complexity:
 |   Operations    |   Balanced    |  Unbalanced (Worst Case)  |
