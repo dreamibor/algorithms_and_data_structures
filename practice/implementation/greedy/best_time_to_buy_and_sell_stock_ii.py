@@ -21,6 +21,14 @@ LeetCode: https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii
 
 
 def max_profit_greedy(prices:list) -> int:
+    """ Greedy
+
+    As long as the price of tomorrow is higher than today, then we buy the stock today
+    and sell the stock tomorrow.
+
+    Time Complexity - O(N) - Iterate the array once.
+    Space Complexity - O(1) - Constant space, only require a variable for result.
+    """
     profit = 0
 
     for i in range(len(prices) - 1):
@@ -30,6 +38,11 @@ def max_profit_greedy(prices:list) -> int:
     return profit
 
 def max_profit_dp(prices:list) -> int:
+    """ Dynamic Programming
+
+    Time Complexity - O(N) - 
+    Space Complexity - O(N) -
+    """
     pass
 
 if __name__ == "__main__":
