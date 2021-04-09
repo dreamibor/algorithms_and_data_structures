@@ -19,7 +19,7 @@ def create_tree_from_list(arr: list) -> TreeNode:
         if i < n:
             # Ignore tree node with None value
             if arr[i] is None:
-                return
+                return None
             
             temp = TreeNode(arr[i])
             root = temp
@@ -72,3 +72,9 @@ if __name__ == "__main__":
     # Postorder
     print("Postorder traverse: ")
     traverse_postorder(root)
+
+    arr = [2, None, 3, None, None, None, 4,None,None, None, None, None, None, None, 5, None, 
+    None, None, None, None, None, None, None, None, None, None, None, None, None, None, 6]
+    root = create_tree_from_list(arr)
+    print("Preorder traverse: ")
+    traverse_preorder(root)

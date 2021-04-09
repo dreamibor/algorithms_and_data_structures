@@ -1,5 +1,5 @@
 """
-BFS - Binary Tree Level Order Traversal
+BFS / DFS - Binary Tree Level Order Traversal
 
 Description:
 Given the root of a binary tree, return the level order traversal of its nodes' values. 
