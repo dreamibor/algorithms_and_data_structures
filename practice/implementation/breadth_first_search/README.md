@@ -1,9 +1,10 @@
 # Breadth First Search (BFS)
 
 ## How BFS Works
+We can use queue to store current node's child nodes.
 ![BFS](assets/bfs.png)
 
-## BFS Source Code
+## BFS Example Code
 Template for BFS:
 ``` Python
 def bfs(graph, start, end):
