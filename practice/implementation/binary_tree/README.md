@@ -218,8 +218,6 @@ Complete trees and heaps are often stored as lists, one node after the other, li
 
 Using a list to store a complete binary tree is very efficient. Since there are no gaps in complete trees, there are no unused slots in the list. And, inserting a new item in the bottom right part of the tree just means appending to the list. 
 
-
-
 ### Reference
 1. [Data Structures Reference - Tree](https://www.interviewcake.com/concept/python/tree)
 2. [Data Structures Reference - Binary Search Tree](https://www.interviewcake.com/concept/python/binary-search-tree)
