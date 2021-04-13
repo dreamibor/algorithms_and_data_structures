@@ -101,7 +101,7 @@ def fibonacci_dp_simp(n: int) -> int:
 
     a, b = 0, 1
 
-    for i in range(1, n):
+    for _ in range(1, n):
         a, b = b, a + b
     
     return b
@@ -115,11 +115,14 @@ def fibonacci_matrix(n: int) -> int:
     so, 
     | F_n   | = | 1  1 | ^ N-1 * | 1 |
     | F_n-1 |   | 1  0 |         | 0 | 
-    
-    So we only need to calculate the power of the matrix, and then we 
-    can get the F_n quickly. The naive method of calculating the power 
-    will be O(N), but we can use exponentiating by squaring (快速幂) to 
-    accelerate the process to be O(logN).
+    assume,
+    m = | 1  1 |
+        | 1  0 |
+
+    We only need to calculate the power of the matrix m, and then we 
+    can calculate the F_n quickly. The naive method of calculating the 
+    power of the matrix will be O(N), but we can use exponentiating by 
+    squaring (快速幂) to accelerate the process to be O(logN).
 
     Time Complexity - O(logN) - For exponentiating by squaring.
     Space Complexity - O(1) - Constant space.
