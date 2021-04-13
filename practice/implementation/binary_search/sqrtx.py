@@ -43,8 +43,7 @@ def sqrtx_int(x: int) -> int:
     return res
 
 def sqrtx(x: int, precision: float) -> int:
-    """
-
+    """ Float Sqrt
 
     """
     left, right = 0, x
