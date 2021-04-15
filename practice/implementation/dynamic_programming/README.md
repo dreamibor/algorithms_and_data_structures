@@ -14,10 +14,12 @@ Two keypoints about DP (whether the problem is suitable for DP):
 
 ## DP Problem Solving Process
 
-1. Define states - 
-2. Recurrence formulation (state transition equation) - 
-3. Initialization - 
+1. Define states - 1D array, 2D array.
+2. Recurrence formulation (state transition equation) - Write down the formula to calculate recurrence status. For example `dp[n] = best_of(dp[n-1], dp[n-2], ...)`
+3. Initialization - Initialize state array values.
 
+动态规划的题目分为两大类:
+一种是求**最优解**类，典型问题是背包问题，另一种就是**计数**类，比如统计方案数的问题，它们都存在一定的递推性质。前者的递推性质还有一个名字，叫做**最优子结构**，即当前问题的最优解取决于子问题的最优解，后者类似，当前问题的方案数取决于子问题的方案数。所以在遇到求方案数的问题时，我们可以往动态规划的方向考虑。
 
 ## Fibonacci Numbers
 Fibonacci numbers are a series of numbers in which each number is the sum of the two preceding numbers.
@@ -42,5 +44,12 @@ For Fibonacci numbers:
 Fib(n) = Fib(n-1) + Fib(n-2)
 ```
 
+## Compare Back-tracking, Greedy and DP
+
+* Back-tracking (recursion) - Enumerate all possible situations, for some problems, there are duplicated calculations.
+* Greedy - Local optimal, local optimal could get golbal optimal.
+* DP - Record local optimal sub-structure (to avoid duplicated calculations) / record mutiple values (for the state transition equation).
+
 ## Reference
 1. [Grokking Dynamic Programming Patterns for Coding Interview](https://www.educative.io/courses/grokking-dynamic-programming-patterns-for-coding-interviews/m2G1pAq0OO0)
+2. [LeetCode Unique Paths II](https://leetcode-cn.com/problems/unique-paths-ii/solution/bu-tong-lu-jing-ii-by-leetcode-solution-2/)

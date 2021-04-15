@@ -25,7 +25,7 @@ def fibonacci_recursion(n: int) -> int:
     """ Recursion 
 
     Time Complexity - O(2^N) - For all repeated nodes.
-    Space Complexity - O(N) - For recursion stack. 
+    Space Complexity - O(N) - For recursion call stack. 
     """ 
     if n <= 1: return n
 
@@ -42,7 +42,7 @@ def fibonacci_recursion_with_memo(n: int) -> int:
     solved subproblems is called Memoization.
 
     Time Complexity - O(N) - For all repeated nodes.
-    Space Complexity - O(N) - Memorization and recursion stack.
+    Space Complexity - O(N) - For memorization and recursion call stack.
     """
     def helper(n: int, memo:list) -> int:
         if n <= 1: return n
