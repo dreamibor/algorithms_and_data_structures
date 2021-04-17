@@ -45,6 +45,28 @@ for 状态1 in 状态1的所有取值：
 
 **状态压缩**: 如果我们发现每次状态转移只需要 DP table 中的一部分，那么可以尝试用状态压缩来缩小 DP table 的大小，只记录必要的数据。
 
+## Four DP Problem Types
+
+1. Matrix DP (10%)
+    * [triangle](triangle.py)
+    * [minimum-path-sum](https://leetcode-cn.com/problems/minimum-path-sum/)
+    * [unique-paths](unique_paths.py)
+    * [unique-paths-ii](unique_paths_ii.py)
+2. Sequence (40%)
+    * [climbing-stairs](climbing_stairs.py)
+    * [jump-game](https://leetcode-cn.com/problems/jump-game/)
+    * [jump-game-ii](https://leetcode-cn.com/problems/jump-game-ii/)
+    * [palindrome-partitioning-ii](https://leetcode-cn.com/problems/palindrome-partitioning-ii/)
+    * [longest-increasing-subsequence](longest_increasing_subsequence.py)
+    * [word-break](https://leetcode-cn.com/problems/word-break/)
+3. Two Sequences DP (40%)
+    * [longest-common-subsequence](https://leetcode-cn.com/problems/longest-common-subsequence/)
+    * [edit-distance](edit_distance.py)
+4. Backpack & Coin Change (10%)
+    * [coin-change](coin_change.py)
+    * [backpack](https://www.lintcode.com/problem/backpack/description)
+    * [backpack-ii](01_knapsack.py)
+
 ## Fibonacci Numbers
 Fibonacci numbers are a series of numbers in which each number is the sum of the two preceding numbers.
 The equation is as follows:
