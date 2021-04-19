@@ -33,8 +33,14 @@ lRUCache.get(4);    // return 4
 Notes:
 Could you do get and put in O(1) time complexity?
 
+Use Cases:
+1. CPU Cache
+
 LeetCode link: https://leetcode-cn.com/problems/lru-cache/
 """
+from collections import OrderedDict
+
+
 class DoublyListNode:
     def __init__(self, key = 0, value = 0):
         self.key = key
@@ -43,7 +49,10 @@ class DoublyListNode:
         self.next = None
 
 class LRUCache:
-    """ To implement a LRU cache, we need to use a hash table and a doubly linked list.
+    """ LRUCache
+    
+    To implement a LRU cache, we need to use a **hash table** and a **doubly linked list**.
+
     In Python, there is a data structure called OrderedDict which already combines hash 
     table and doubly linked list. But usually, in an interview, we'll be asked to implement
     a doubly linked list by ourselves.
@@ -70,7 +79,7 @@ class LRUCache:
     2. If the key exists, then locate the node through hash table and update the value of the node 
     with new value, and move the node to the head.
 
-    Note: We can ise a dummy head and a dummy tail to mark the bound, so that we don't need to check 
+    Note: We can use a dummy head and a dummy tail to mark the bound, so that we don't need to check 
     whethere a neighbour node exist or not.
 
     Time Complexity - O(1) - For put() and get(), O(1) to access hash table, O(1) to add a node at 
@@ -155,9 +164,63 @@ class LRUCache:
         self.remove_node(node)
         return node
 
+class LRUCacheOrderedDict:
+    def __init__(self, capacity: int):
+        self.cache = OrderedDict()
+        self.remain = capacity
+
+    def __repr__(self) -> str:
+        result = []
+        for key, value in self.cache.items():
+            result.append(f"[{key} - {value}]")
+        return ", ".join(result)
+
+    def get(self, key: int) -> int:
+        if key not in self.cache:
+            return -1
+        # Get the value and add it again to set it as the newest one.
+        value = self.cache.pop(key)
+        self.cache[key] = value
+        return value
+
+    def put(self, key: int, value: int) -> None:
+        if key in self.cache:
+            # If the key already exist, pop it out.
+            self.cache.pop(key)
+        else:
+            # Check whether there are enough remaining space.
+            if self.remain > 0:
+                self.remain -= 1
+            else:
+                # Remove the last item as the cache is full. The pairs are returned 
+                # in LIFO order if last is true or FIFO order if false.
+                self.cache.popitem(last = False)
+
+        self.cache[key] = value
+
 
 if __name__ == "__main__":
+    # Hash table with Doubly Linked List
+    print("Doubly Linked List LRU (capacity 2): ")
     lru_cache = LRUCache(2)
+    lru_cache.put(1, 1)  # cache is {1=1}
+    print(lru_cache)
+    lru_cache.put(2, 2)  # cache is {1=1, 2=2}
+    lru_cache.get(1)     # return 1
+    print(lru_cache)
+    lru_cache.put(3, 3)  # LRU key was 2, evicts key 2, cache is {1=1, 3=3}
+    print(lru_cache)
+    lru_cache.get(2)     # returns -1 (not found)
+    print(lru_cache)
+    lru_cache.put(4, 4)  # LRU key was 1, evicts key 1, cache is {4=4, 3=3}
+    lru_cache.get(1)     # return -1 (not found)
+    lru_cache.get(3)     # return 3
+    lru_cache.get(4)     # return 4
+    print(lru_cache)
+
+    # Python OrderedDict
+    print("OrderedDict LRU (capacity 2): ")
+    lru_cache = LRUCacheOrderedDict(2)
     lru_cache.put(1, 1)  # cache is {1=1}
     print(lru_cache)
     lru_cache.put(2, 2)  # cache is {1=1, 2=2}

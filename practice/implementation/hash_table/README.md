@@ -54,14 +54,16 @@ CPython’s dictionaries are implemented as **resizable hash tables**. Compared 
 
 Dictionaries work by computing a hash code for each key stored in the dictionary using the hash() built-in function. The hash code varies widely depending on the key and a per-process seed; for example, “Python” could hash to -539294296 while “python”, a string that differs by a single bit, could hash to 1142331976. The hash code is then used to calculate a location in an internal array where the value will be stored. Assuming that you’re storing keys that all have different hash values, this means that dictionaries take constant time – O(1), in Big-O notation – to retrieve a key.
 
-# Bloom Filter
+# Bloom Filter (布隆过滤器)
 A bloom filter is a space-efficient data structure that lets you quickly check whether an item is in a set or not.
+
+布隆过滤器由一个很长的二进制向量和一个映射函数组成。
 
 The tradeoff for that space efficiency is that it's probabilistic: sometimes instead of giving you concrete answers it just says "probably".
 
 When you look up an item in a bloom filter, the possible answers are:
-- It's definitely not in the set. This is a true negative.
-- It might be in the set. This could be a false positive, or it could be a true positive.
+- It's definitely not in the set. This is a true negative. 当查询结果不在的时候，该元素肯定不在集合中。
+- It might be in the set. This could be a false positive, or it could be a true positive. 所以当布隆过滤器返回存在的时候，我们还需要在数据库中进一步的查询，它可能存在也可能不存在。
 
 Operations:
 Insert - O(1)
@@ -106,6 +108,9 @@ Bloom filters are only appropriate when it's feasible to handle false positives.
 Bloom filter can be used as a first layer of filtering. We can use it in anywhere where knowing if something is definitely not present or possibly present would be helpful. 
 
 One common use is to eliminate unnecessary accesses to slower storage / expensive lookups.
+
+1. Bitcoin - Redis v.s. Bloom Filter
+2. Distributed systems - Map-Reduce
 
 ## Handling False Positive
 
