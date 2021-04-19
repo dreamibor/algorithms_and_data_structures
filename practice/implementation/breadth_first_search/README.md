@@ -4,6 +4,11 @@
 We can use queue to store current node's child nodes.
 ![BFS](assets/bfs.png)
 
+BFS 算法的常用场景：
+
+在一幅「图」中找到从起点 start 到终点 target 的最近距离。
+
+
 ## BFS Example Code
 Template for BFS:
 ``` Python
@@ -27,3 +32,6 @@ def bfs(graph, start, end):
 
     # other processing work
 ```
+
+## Reference
+1. [BFS 算法框架套路详解](https://labuladong.github.io/algo/%E7%AE%97%E6%B3%95%E6%80%9D%E7%BB%B4%E7%B3%BB%E5%88%97/BFS%E6%A1%86%E6%9E%B6.html)
