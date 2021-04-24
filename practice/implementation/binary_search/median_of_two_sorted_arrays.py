@@ -16,6 +16,16 @@ LeetCode: https://leetcode-cn.com/problems/median-of-two-sorted-arrays/
 
 
 def find_median(nums1: list, nums2: list) -> float:
+    """ Binary Search
+
+    According to the definition of median, assuming the length of the two 
+    arrays are `m` and `n`, when `m + n` is odd, the median will be the 
+    element at index of (m+n)/2. When `m+n` is even, then the median will 
+    be the average of numbers at (m+n)/2 and (m+n)/2+1.
+
+    The problem can be trasferred to finding the k_th smallest number in 
+    the two given sorted arrays, where k is (m+n)/2 or (m+n)/2 + 1.
+    """
     pass
 
 
