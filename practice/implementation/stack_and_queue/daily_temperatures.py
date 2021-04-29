@@ -30,8 +30,8 @@ def daily_temp(temperatures: list) -> list:
     indices, which will be the value that we want. If the current number is 
     smaller than the stack top, then push the current number into the stack.
 
-    Time Complexity - O(N) - 
-    Space Complexity - O(N) - 
+    Time Complexity - O(N) - Iterate throug the stack only once.
+    Space Complexity - O(N) - Fot the stack.
     """
     result = [0] * len(temperatures)
     # Monotonic decreasing stack for indices.

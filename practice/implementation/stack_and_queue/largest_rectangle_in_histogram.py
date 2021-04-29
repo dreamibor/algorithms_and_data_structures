@@ -16,6 +16,10 @@ LeetCode: https://leetcode-cn.com/problems/largest-rectangle-in-histogram/
 
 
 def largest_rectangle_area(heights: list) -> int:
+    """ Monotonic Stack
+    
+
+    """
     pass
 
 
