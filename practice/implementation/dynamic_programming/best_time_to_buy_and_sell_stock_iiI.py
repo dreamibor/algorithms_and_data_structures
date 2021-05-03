@@ -125,9 +125,13 @@ def max_profit_dp_opt(prices: list) -> int:
     # dp[i][1][0] = max(dp[i-1][1][0], dp[i-1][1][1] + prices[i])
     # dp[i][1][1] = max(dp[i-1][1][1], -prices[i])
     for price in prices:
+        # The maximumi if we've just sold 2nd stock so far.
         dp_i_2_0 = max(dp_i_2_0, dp_i_2_1 + price)
+        # The maximumi if we've just buy  2nd stock so far.
         dp_i_2_1 = max(dp_i_2_1, dp_i_1_0 - price)
+         # The maximumi if we've just sold 1st stock so far.
         dp_i_1_0 = max(dp_i_1_0, dp_i_1_1 + price)
+         # The maximumi if we've just buy  1st stock so far.
         dp_i_1_1 = max(dp_i_1_1, -price)
     
     return dp_i_2_0

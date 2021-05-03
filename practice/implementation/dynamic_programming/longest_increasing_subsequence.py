@@ -73,7 +73,7 @@ def length_of_lis_dp(nums: list) -> int:
             # Check if nums[j] < nums[i] to keep increasing.
             if nums[j] < nums[i]:
                 dp[i] = max(dp[i], dp[j] + 1)
-        # Memorize the maxium along the way.
+        # Memorize the maximum along the way.
         res = max(res, dp[i])
 
     return res

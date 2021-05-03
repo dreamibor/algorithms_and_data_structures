@@ -49,7 +49,7 @@ def maximal_square(matrix: list) -> int:
     # for j in range(n):
     #     dp[0][j] = 1 if dp[0][j] == 1 else 0
 
-    # Record the maxium length
+    # Record the maximum length
     max_side_len = 0
 
     for i in range(m):

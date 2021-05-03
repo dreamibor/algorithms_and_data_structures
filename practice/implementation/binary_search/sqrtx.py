@@ -45,6 +45,7 @@ def sqrtx_int(x: int) -> int:
 def sqrtx(x: int, precision: float) -> int:
     """ Float Sqrt
 
+    Using the precision as the exit condition of while loop.
     """
     left, right = 0, x
 
