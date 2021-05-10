@@ -30,7 +30,7 @@ def merge_sorted_array(nums1: list, m: int, nums2: list, n: int) -> None:
     Space Complexity - O(1) - If not considering space for sorting.
     """
 
-    # Move all values in nums2 to nums1.
+    # Move all values in nums2 to nums1 (from index m).
     for i in range(n):
         nums1[m+i] = nums2[i]
 
@@ -39,7 +39,7 @@ def merge_sorted_array(nums1: list, m: int, nums2: list, n: int) -> None:
 
     print(nums1)
 
-def merge_two_pointer_front_to_back(nums1: list, m: int, nums2: list, n: int) -> None:
+def merge_two_pointer_forward(nums1: list, m: int, nums2: list, n: int) -> None:
     """ Two Pointers
     We can use two pointers to merge nums2 into nums1. Since nums1 is the 
     output array, we need to save all m elements in nums1 in another place 
@@ -75,13 +75,13 @@ def merge_two_pointer_front_to_back(nums1: list, m: int, nums2: list, n: int) ->
 
     print(nums1)
 
-def merge_two_pointer_back_to_front(nums1: list, m: int, nums2: list, n: int) -> None:
+def merge_two_pointer_backward(nums1: list, m: int, nums2: list, n: int) -> None:
     """ Two Pointers From Backward
     We can change values of nums1 from backward since there are 
     n zeros after m elements.
 
     Time Complexity - O(N+M) - Iterate through nums1 and nums2 once.
-    Space Complexity - O(M) - Only for pointers.
+    Space Complexity - O(1) - Only for pointers.
     """
     # Pointer for nums1 from backward.
     p = m + n - 1
@@ -96,8 +96,10 @@ def merge_two_pointer_back_to_front(nums1: list, m: int, nums2: list, n: int) ->
         else:
             nums1[p] = nums1[p1]
             p1 -= 1
+        # Reduce the index for the total array by 1
         p -= 1
     
+    # If there are still elements in nums2, then copy the remaining values to nums1.
     if p2 >= 0:
         nums1[:p2 + 1] = nums2[:p2 + 1]
 
@@ -110,7 +112,7 @@ if __name__ == "__main__":
     merge_sorted_array(nums1, 3, nums2, 3)
     nums1 = [1,2,3,0,0,0]
     nums2 = [2,5,6]
-    merge_two_pointer_front_to_back(nums1, 3, nums2, 3)
+    merge_two_pointer_forward(nums1, 3, nums2, 3)
     nums1 = [1,2,3,0,0,0]
     nums2 = [2,5,6]
-    merge_two_pointer_back_to_front(nums1, 3, nums2, 3)
+    merge_two_pointer_backward(nums1, 3, nums2, 3)
