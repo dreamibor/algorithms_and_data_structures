@@ -15,6 +15,7 @@ import sys
 sys.path.append('../')
 
 from binary_tree.tree_node import TreeNode, create_tree_from_list
+from collections import defaultdict
 
 
 def level_order_traversal(root: TreeNode) -> list:
@@ -60,27 +61,39 @@ def level_order_traversal_dfs(root: TreeNode) -> list:
     Time Complexity - O(N) - All elements are iterated once.
     Space Complexity - O(N) - For recursion stack and result.
     """
-    def dfs_helper(root, level):
-        # Recursion termination
-        if not root: return
+    # def dfs_helper(root, level):
+    #     # Recursion termination
+    #     if not root: return
 
-        # Add a new empty list for this level.
-        if len(result) < level + 1:
-            result.append([])
+    #     # Add a new empty list for this level.
+    #     if len(result) < level + 1:
+    #         result.append([])
         
-        # Append the node's value into current level's list.
-        result[level].append(root.val)
+    #     # Append the node's value into current level's list.
+    #     result[level].append(root.val)
 
-        # Recursion for next level.
-        dfs_helper(root.left, level + 1)
-        dfs_helper(root.right, level + 1)
+    #     # Recursion for next level.
+    #     dfs_helper(root.left, level + 1)
+    #     dfs_helper(root.right, level + 1)
         
-    # Edge cases - empty tree.
-    if not root: return []
+    # # Edge cases - empty tree.
+    # if not root: return []
 
-    result = []
-    dfs_helper(root, 0)
-    return result
+    # result = []
+    # dfs_helper(root, 0)
+    # return result
+    level_nodes = defaultdict(list)
+
+    def traverse(node, level):
+        if node is None:
+            return 
+        level_nodes[level].append(node.val)
+
+        traverse(node.left, level + 1)
+        traverse(node.right, level + 1)
+
+    traverse(root, 0)
+    return [level_nodes[key] for key in sorted(level_nodes.keys())]
 
 
 if __name__ == "__main__":

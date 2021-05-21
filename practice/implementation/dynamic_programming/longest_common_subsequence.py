@@ -79,8 +79,42 @@ def common_subsequence_dp(text1: str, text2: str) -> int:
                 dp[i][j] = dp[i-1][j-1] + 1
             else:
                 dp[i][j] = max(dp[i-1][j], dp[i][j-1])
-            
-    return dp[m][n]
+    
+    lcs_set = set()
+    # Trace back the LCS string.
+    def track_back(i: int, j: int, lcs_str: str, max_len: int) -> str:
+        # Trace back from dp[m][n] (right-bottom).
+        while i > 0 and j > 0:
+            # If the two characters are the same, then it's transferred from 
+            # dp[i-1][j-1], add the charcter into LCS string and minius 
+            # i and j by one.  
+            if text1[i-1] == text2[j-1]:
+                lcs_str += text1[i-1]
+                i -= 1
+                j -= 1
+            else:
+                # If text1[i-1] != text2[j-1], then we need to compare the 
+                # value of dp[i-1][j] and dp[i][j-1]. We shall select the 
+                # larger one to dive into.
+                if dp[i-1][j] > dp[i][j-1]:
+                    i -= 1
+                elif dp[i-1][j] < dp[i][j-1]:
+                    j -= 1 
+                # If the two values are the same, it means there are multiple 
+                # LCSs, so we need to backtracking to all of them with recursion.
+                else:
+                    track_back(i - 1, j, lcs_str, max_len)
+                    track_back(i, j - 1, lcs_str, max_len)
+                    return 
+        
+        # If the string length is the same as longest LCS, add it into set.
+        if len(lcs_str) == max_len:
+            lcs_set.add(lcs_str[::-1])
+
+    # Retreive the LCS string.
+    track_back(m, n, "", dp[m][n])
+
+    return dp[m][n], lcs_set
 
 def common_subsequence_recur(text1: str, text2: str) -> int:
     """ Recursion - Backward
