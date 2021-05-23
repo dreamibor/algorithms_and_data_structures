@@ -2,9 +2,11 @@
 
 ## How DFS Works
 We can use stack to store traversed nodes.
+
 ![DFS](assets/dfs.png)
 
 Comparison between BFS and DFS:
+
 ![BFS and DFS Comparison](assets/bfs_and_dfs.png)
 
 ## DFS Example Code
