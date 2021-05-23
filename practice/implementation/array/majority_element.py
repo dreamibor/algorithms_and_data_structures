@@ -83,7 +83,7 @@ def majority_element_divide_and_conquer(nums: list, low=0, high=None) -> int:
     return majority_element_recursion(nums, 0, len(nums) - 1)
 
 
-def majority_element_voting(nums: list, low=0, high=None) -> int:
+def majority_element_voting(nums: list) -> int:
     """ Boyer-Moore Voting
     If we count the mode as +1 while others as -1, if we add them 
     together, the sum is apprently larger than 0.
