@@ -55,6 +55,11 @@ def word_break(string: str, word_dict: list) -> bool:
     # DP state transition
     for i in range(n):
         for j in range(i+1, n+1):
+            # Optimization:
+            # 1. Pruning based on words' length. Words' lengths usually have a fixed range. 
+            # We can get the minimum and maximum length in the word dict and ignore those 
+            # out of range.
+            # 2. Using set / hash table rather than list for searching.
             if dp[i] and string[i:j] in word_dict:
                 dp[j] = True
 
